@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author @haihv433
+ * @copyright Copyright (c) 2020 Goomento (https://store.goomento.com)
+ * @package Goomento_Base
+ * @link https://github.com/Goomento/Base
+ */
+-->
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Goomento_Base::menu"
+             title="Goomento"
+             module="Goomento_Base"
+             translate="title"
+             sortOrder="24"
+             resource="Goomento_Base::menu"/>
+        <add id="Goomento_Base::config"
+             title="Extensions"
+             module="Goomento_Base"
+             translate="title"
+             sortOrder="1996"
+             action="adminhtml/system_config/edit/section/goomento"
+             parent="Goomento_Base::menu"
+             resource="Goomento_Base::config"/>
+    </menu>
+</config>

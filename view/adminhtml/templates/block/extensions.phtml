@@ -1,0 +1,45 @@
+<?php
+/**
+ * @author @haihv433
+ * @copyright Copyright (c) 2020 Goomento (https://store.goomento.com)
+ * @package Goomento_Base
+ * @link https://github.com/Goomento/Base
+ */
+?>
+<fieldset id="goomento_general">
+    <div>
+        <h1>Thank for using <strong>Goomento</strong> package</h1>
+        <p>We got some free extension might celebrate your business</p>
+        <p>Browse us at</p>
+    </div>
+    <div style="display: flex;">
+        <a target="_blank"
+           class="action-default"
+           href="https://github.com/Goomento">
+            <span class="ui-button-text">Project on Github</span>
+        </a>
+        <a target="_blank"
+           class="action-default"
+           href="https://store.goomento.com?utm_source=magento2_backend">
+            <span class="ui-button-text">Official website</span>
+        </a>
+    </div>
+    <div id="goomento_root"></div>
+</fieldset>
+<style>
+    #goomento_general .action-default {
+        display: block;
+        width: 50%;
+        border: 0;
+        padding: 10px;
+        margin: 10px;
+    }
+</style>
+<script>
+    require([
+        'jquery',
+        'Goomento_Base/js/model/extension-information'
+    ], function ($, Information) {
+        Information(document.getElementById('goomento_root'));
+    });
+</script>

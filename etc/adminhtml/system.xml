@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @author @haihv433
+ * @copyright Copyright (c) 2020 Goomento (https://store.goomento.com)
+ * @package Goomento_Base
+ * @link https://github.com/Goomento/Base
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="goomento" translate="label" sortOrder="2020" class="goomento-class-tab">
+            <label>Goomento</label>
+        </tab>
+        <section id="goomento" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+            <resource>Goomento_Base::config</resource>
+            <label>General</label>
+            <tab>goomento</tab>
+            <group id="general" translate="label" type="text" sortOrder="1" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>Goomento</label>
+                <frontend_model>Goomento\Base\Block\Extensions</frontend_model>
+            </group>
+        </section>
+    </system>
+</config>
