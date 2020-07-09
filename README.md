@@ -4,7 +4,7 @@
 
 ### 1. How to install Magento 2 Goomento Base
 
-Check [INSTALL.md](https://github.com/Goomento/Base/blob/master/INSTALL.md)
+Follow install instruction in [INSTALL.md](https://github.com/Goomento/Base/blob/master/INSTALL.md)
 
 ### 2. Version compatible
 
