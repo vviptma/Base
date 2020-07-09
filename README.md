@@ -1,51 +1,13 @@
-# Goomento Base 
+# We are Goomento, we commit for OPEN and FREE 
 
-## How to install & upgrade Goomento_Base
+## Magento 2 Goomento Base (Core) module
 
-### 1. Install via Git
+### 1. How to install Magento 2 Goomento Base
 
-Run the following command Magento 2 root folder
+Check [INSTALL.md](https://github.com/Goomento/Base/blob/master/INSTALL.md)
 
-#### 1.1 Install
+### 2. Version compatible
 
-```
-mkdir -f app/code/Goomento
-git clone git@github.com:Goomento/Base.git app/code/Goomento/
-php bin/magento setup:upgrade
-php bin/magento setup:static-content:deploy
-```
+**Magento 2 Community**: 2.2.*
 
-#### 1.2 Upgrade
-
-```
-cd app/code/Goomento/Base
-git pull origin master
-# Back to Magento root folder
-cd ../../../../
-php bin/magento setup:upgrade
-php bin/magento setup:static-content:deploy
-```
-
-Run compile if your store in Product mode:
-
-```
-php bin/magento setup:di:compile
-```
-
-### 2. Upload the file.
-
-You can try this way to upload the file to your server using [Filezilla](https://filezilla-project.org/)
-
-- Download [the latest version here](https://github.com/Goomento/Base/archive/master.zip) 
-- Extract `Base-master.zip`; 
-- Upload (or copy) the file to your server (or project) under `app/code/Goomento/Base`. You should create a folder path `app/code/Goomento/Base` if not exist.
-- Go to Magento 2 root folder and run upgrade command:
-```
-php bin/magento setup:upgrade
-php bin/magento setup:static-content:deploy
-```
-Run compile if your store in Product mode:
-
-```
-php bin/magento setup:di:compile
-```
+**Magento 2 Enterprise**: 2.3.*
