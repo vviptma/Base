@@ -26,6 +26,7 @@ use Psr\Log\LoggerInterface;
  */
 class Logger extends AbstractHelper
 {
+    use \Goomento\Base\Traits\InstanceManager;
     use \Goomento\Base\Traits\Logger;
 
     /**

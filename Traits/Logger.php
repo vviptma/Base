@@ -26,8 +26,6 @@ use Psr\Log\LoggerInterface;
  */
 trait Logger
 {
-    use InstanceManager;
-
     /**
      * @param $name
      * @param $arguments

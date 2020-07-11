@@ -9,10 +9,10 @@
 namespace Goomento\Base\Exceptions;
 
 /**
- * Class UndefinedMethodCall
+ * Class UndefinedMethodCallException
  * @package Goomento\Base\Exceptions
  */
-class UndefinedMethodCall extends \Exception
+class UndefinedMethodCallException extends \Exception
 {
 
 }

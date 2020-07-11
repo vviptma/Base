@@ -7,7 +7,7 @@
  */
 namespace Goomento\Base\Helper;
 
-use Goomento\Base\Exceptions\UndefinedMethodCall;
+use Goomento\Base\Exceptions\UndefinedMethodCallException;
 use Magento\Framework\App\Config\ScopeConfigInterface;
 
 /**
@@ -21,6 +21,7 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
  */
 abstract class AbstractPaymentGatewayConfig extends \Magento\Payment\Gateway\Config\Config
 {
+    use \Goomento\Base\Traits\InstanceManager;
     use \Goomento\Base\Traits\Config;
 
     /**
@@ -54,7 +55,7 @@ abstract class AbstractPaymentGatewayConfig extends \Magento\Payment\Gateway\Con
      * @param $name
      * @param $arguments
      * @return mixed
-     * @throws UndefinedMethodCall
+     * @throws UndefinedMethodCallException
      */
     public static function __callStatic($name, $arguments)
     {
@@ -65,7 +66,7 @@ abstract class AbstractPaymentGatewayConfig extends \Magento\Payment\Gateway\Con
             if (method_exists($object, $method)) {
                 return $object->$method(...$arguments);
             }
-            throw new UndefinedMethodCall();
+            throw new UndefinedMethodCallException();
         }
     }
 }

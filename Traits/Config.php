@@ -16,8 +16,6 @@ use Magento\Framework\App\Config\ScopeConfigInterface;
  */
 trait Config
 {
-    use InstanceManager;
-
     /**
      * @param string $path
      * @param $default
@@ -26,8 +24,6 @@ trait Config
      */
     public function configGet(string $path, $default = null, $storeId = null)
     {
-        $this->_configScopeConfig();
-
         $real_config_path =  ($this->config_path ?? []) + array_fill(0, 3, '');
 
         $real_config_path = array_reverse($real_config_path);
@@ -43,18 +39,6 @@ trait Config
             \Magento\Store\Model\ScopeInterface::SCOPE_STORE,
             $storeId
         ) ?? $default;
-    }
-
-    /**
-     * @return ScopeConfigInterface
-     */
-    protected function _configScopeConfig()
-    {
-        if (!isset($this->scopeConfig) || is_null($this->scopeConfig)) {
-            $this->scopeConfig = $this->instanceGet(ScopeConfigInterface::class);
-        }
-
-        return $this->scopeConfig;
     }
 
     /**

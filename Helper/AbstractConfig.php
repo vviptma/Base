@@ -8,7 +8,7 @@
 
 namespace Goomento\Base\Helper;
 
-use Goomento\Base\Exceptions\UndefinedMethodCall;
+use Goomento\Base\Exceptions\UndefinedMethodCallException;
 use Magento\Framework\App\Helper\Context;
 
 /**
@@ -22,6 +22,7 @@ use Magento\Framework\App\Helper\Context;
  */
 abstract class AbstractConfig extends AbstractHelper
 {
+    use \Goomento\Base\Traits\InstanceManager;
     use \Goomento\Base\Traits\Config;
 
     /**
@@ -47,7 +48,7 @@ abstract class AbstractConfig extends AbstractHelper
     {
         try {
             return parent::__callStatic($name, $arguments);
-        } catch (UndefinedMethodCall $e) {
+        } catch (UndefinedMethodCallException $e) {
             $method = lcfirst(substr($name, 6));
             /** @var AbstractConfig $object */
             $object = self::instanceGet();

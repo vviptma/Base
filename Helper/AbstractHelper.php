@@ -8,12 +8,13 @@
 
 namespace Goomento\Base\Helper;
 
-use Goomento\Base\Exceptions\UndefinedMethodCall;
+use Goomento\Base\Exceptions\UndefinedMethodCallException;
 /**
  * Class AbstractHelper
  * @package Goomento\Base\Helper
  */
 abstract class AbstractHelper extends \Magento\Framework\App\Helper\AbstractHelper
 {
+    use \Goomento\Base\Traits\InstanceManager;
     use \Goomento\Base\Traits\CallStatically;
 }

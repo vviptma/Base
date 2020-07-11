@@ -9,7 +9,7 @@
 namespace Goomento\Base\Traits;
 
 
-use Goomento\Base\Exceptions\UndefinedMethodCall;
+use Goomento\Base\Exceptions\UndefinedMethodCallException;
 
 /**
  * Trait CallStatically
@@ -17,13 +17,12 @@ use Goomento\Base\Exceptions\UndefinedMethodCall;
  */
 trait CallStatically
 {
-    use InstanceManager;
     /**
      * Use `static` as prefix to avoid any PHP standard loader
      * @param $name
      * @param $arguments
      * @return mixed
-     * @throws UndefinedMethodCall
+     * @throws UndefinedMethodCallException
      * @throws \Exception
      */
     public static function __callStatic($name, $arguments)
@@ -34,7 +33,7 @@ trait CallStatically
             try {
                 return $object->$method(...$arguments);
             } catch (\BadMethodCallException $e) {
-                throw new UndefinedMethodCall("Call undefined method {$method}");
+                throw new UndefinedMethodCallException("Call undefined method {$method}");
             } catch (\Exception $e) {
                 throw $e;
             }
