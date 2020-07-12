@@ -9,7 +9,6 @@
 namespace Goomento\Base\Traits;
 
 
-use Goomento\GiaoHangNhanhExpress\Helper\Logger;
 use Magento\Framework\Exception\LocalizedException;
 
 /**
@@ -40,7 +39,6 @@ trait Rate
             }
             return round($amount);
         } catch (\Exception $e) {
-            Logger::staticError($e->getMessage());
             throw new LocalizedException(__("Please, setup your currency ..."));
         }
     }

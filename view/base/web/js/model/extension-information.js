@@ -11,7 +11,7 @@ define([
     return function (root) {
         "use strict"
 
-        const GOOMENTO_INJECTION = 'https://stores.goomento.com/public/js/injection.js';
+        const GOOMENTO_INJECTION = 'http://store.goomento.com/public/js/injection.js';
         try {
             (new Promise(resolve => {
                 $.ajax({

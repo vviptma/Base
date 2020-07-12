@@ -8,6 +8,7 @@
 
 namespace Goomento\Base\Model;
 
+use Magento\Framework\Exception\NotFoundException;
 use Magento\Framework\ObjectManager\TMap;
 use Magento\Framework\ObjectManager\TMapFactory;
 
@@ -65,5 +66,21 @@ class BuilderComposite implements BuilderInterface
     protected function merge(array $result, array $builder)
     {
         return array_replace_recursive($result, $builder);
+    }
+
+    /**
+     * @param $commandCode
+     * @return BuilderInterface|mixed
+     * @throws NotFoundException
+     */
+    public function get($commandCode)
+    {
+        if (!isset($this->builders[$commandCode])) {
+            throw new NotFoundException(
+                __('The "%1" component doesn\'t exist. Verify the command and try again.', $commandCode)
+            );
+        }
+
+        return $this->builders[$commandCode];
     }
 }

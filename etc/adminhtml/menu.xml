@@ -17,7 +17,7 @@
              sortOrder="24"
              resource="Goomento_Base::menu"/>
         <add id="Goomento_Base::config"
-             title="Extensions"
+             title="Extensions &amp; Configuration"
              module="Goomento_Base"
              translate="title"
              sortOrder="1996"
