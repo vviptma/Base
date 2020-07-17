@@ -12,18 +12,7 @@ Follow install instruction in [INSTALL.md](https://github.com/Goomento/Base/blob
 
 **Magento 2 Enterprise**: 2.*
 
-### 3. Open an issue
+### 3. Contribution and report an issue
 
-To open an issue, click [here](https://github.com/Goomento/Base/issues).
+Follow this link [CONTRIBUTION.md](https://github.com/Goomento/Base/blob/master/CONTRIBUTION.md)
 
-### 4. Contribution
-
-The basic flow for contribution is as follows
-
-1. Fork the repository.
-
-2. Make your fix/feature.
-
-3. Create a pull request (PR).
-
-**Goomento** will soon reply on your PR.
