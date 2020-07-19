@@ -1,0 +1,14 @@
+<?php
+/**
+ * @author @haihv433
+ * @copyright Copyright (c) 2020 Goomento (https://store.goomento.com)
+ * @package Goomento_Base
+ * @link https://github.com/Goomento/Base
+ */
+
+/** @var \Goomento\Base\Block\ConfigProvider $block */
+
+?>
+<script>
+    window.Goomento = <?= $block->getSerializedConfig() ?>;
+</script>
